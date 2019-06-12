@@ -2,6 +2,10 @@ BACKUP ~baeloth-drow-tweak/backup~
 AUTHOR ~www.shsforums.net/topic/44027-laviconia-tweak/ - Expanded by DymeDef(Transflux)~
 VERSION ~v1~
 
+ALWAYS
+
+	ACTION_IF ((FILE_EXISTS ~dlc/sod-dlc.zip~) OR (FILE_EXISTS ~sod-dlc.zip~)) THEN BEGIN FAIL ~Siege of Dragonspear DLC needs to be extracted using Modmerge~
+	
 BEGIN ~Give Baeloth the Drow Tweaks from Viconia Revamped (Requires Viconia Revamped installed first) in BG:EE?~
 REQUIRE_PREDICATE GAME_IS ~bgee~ ~This component is not compatible with your game~
 
