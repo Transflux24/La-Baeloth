@@ -1,23 +1,26 @@
 BACKUP ~baeloth-drow-tweak/backup~
 AUTHOR ~www.shsforums.net/topic/44027-laviconia-tweak/ - Expanded by DymeDef(Transflux)~
 VERSION ~v1~
-
+LANGUAGE ~English~ 
+		 ~en_US~ 
+		 ~baeloth-drow-tweak/common/english/english.tra~
 ALWAYS
 
-	ACTION_IF ((FILE_EXISTS ~dlc/sod-dlc.zip~) OR (FILE_EXISTS ~sod-dlc.zip~)) THEN BEGIN FAIL ~Siege of Dragonspear DLC needs to be extracted using Modmerge~
+	ACTION_IF ((FILE_EXISTS ~dlc/sod-dlc.zip~) OR (FILE_EXISTS ~sod-dlc.zip~)) THEN BEGIN FAIL @4002 END
 	
-BEGIN ~Give Baeloth the Drow Tweaks from Viconia Revamped (Requires Viconia Revamped installed first) in BG:EE?~
-REQUIRE_PREDICATE GAME_IS ~bgee~ ~This component is not compatible with your game~
+BEGIN @4004
+REQUIRE_PREDICATE GAME_IS ~bgee~ @4003
 
 EXTEND_TOP ~BAELOTH.BCS~ ~baeloth-drow-tweak/baf/BAELOTH.BAF~
 
-BEGIN ~Give Baeloth Drow Tweaks from Viconia (Requires Viconia Revamped installed first) in SoD?~
-REQUIRE_PREDICATE GAME_IS ~bgee~ ~This component is not compatible with your game~
+BEGIN @4005
+REQUIRE_PREDICATE GAME_IS ~bgee~ @4003
+REQUIRE_PREDICATE NOT FILE_EXISTS ~sod-dlc/SoDAreas.bif~ @4001
 
 EXTEND_TOP ~BDBAELOTH.BCS~ ~baeloth-drow-tweak/baf/BAELOTH.BAF~
 
-BEGIN ~Give Baeloth the Drow Tweaks from Viconia Revamped (Requires Viconia Revamped installed first) in BG:EET?~
-REQUIRE_PREDICATE GAME_IS ~eet~ ~This component is not compatible with your game~
+BEGIN @4006
+REQUIRE_PREDICATE GAME_IS ~eet~ @4003
 
 EXTEND_TOP ~BAELOTH.BCS~ ~baeloth-drow-tweak/baf/BAELOTH.BAF~
 EXTEND_TOP ~BDBAELOT.BCS~ ~baeloth-drow-tweak/baf/BAELOTH.BAF~
