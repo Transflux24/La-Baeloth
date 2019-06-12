@@ -1,11 +1,19 @@
 BACKUP ~baeloth-drow-tweak/backup~
-AUTHOR ~www.shsforums.net/topic/44027-laviconia-tweak/ - Expanded by DymeDef~
+AUTHOR ~www.shsforums.net/topic/44027-laviconia-tweak/ - Expanded by DymeDef(Transflux)~
 VERSION ~v1~
 
 BEGIN ~Give Baeloth the Drow Tweaks from Viconia Revamped (Requires Viconia Revamped installed first) in BG:EE?~
+REQUIRE_PREDICATE GAME_IS ~bgee~ ~This component is not compatible with your game~
 
-EXTEND_TOP ~BAELOTH.BCS~ ~labaeloth/baf/BAELOTH.BAF~
+EXTEND_TOP ~BAELOTH.BCS~ ~baeloth-drow-tweak/baf/BAELOTH.BAF~
 
 BEGIN ~Give Baeloth Drow Tweaks from Viconia (Requires Viconia Revamped installed first) in SoD?~
+REQUIRE_PREDICATE GAME_IS ~bgee~ ~This component is not compatible with your game~
 
-EXTEND_TOP ~BDBAELOTH.BCS~ ~labaeloth/baf/BAELOTH.BAF~
+EXTEND_TOP ~BDBAELOTH.BCS~ ~baeloth-drow-tweak/baf/BAELOTH.BAF~
+
+BEGIN ~Give Baeloth the Drow Tweaks from Viconia Revamped (Requires Viconia Revamped installed first) in BG:EET?~
+REQUIRE_PREDICATE GAME_IS ~eet~ ~This component is not compatible with your game~
+
+EXTEND_TOP ~BAELOTH.BCS~ ~baeloth-drow-tweak/baf/BAELOTH.BAF~
+EXTEND_TOP ~BDBAELOT.BCS~ ~baeloth-drow-tweak/baf/BAELOTH.BAF~
